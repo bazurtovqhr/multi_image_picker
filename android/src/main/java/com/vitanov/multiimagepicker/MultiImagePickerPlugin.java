@@ -210,6 +210,7 @@ public class MultiImagePickerPlugin implements
             }
             super.onPostExecute(buffer);
             this.messenger.send("multi_image_picker/image/" + this.identifier + ".original", buffer);
+            System.out.println("multi_image_picker/image/" + this.identifier + ".original " +  buffer);
         }
     }
 
