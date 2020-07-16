@@ -201,13 +201,14 @@ public class MultiImagePickerPlugin implements
 //            this.messenger.send("multi_image_picker/image/" + this.identifier + ".original", buffer);
 //            buffer.clear();
             if(buffer!=null){
-                super.onPostExecute(buffer);
+//                super.onPostExecute(buffer);
 //                this.messenger.send("multi_image_picker/image/" + this.identifier + ".original", buffer);
                 buffer.clear();
             } else {
 //                this.messenger.send("multi_image_picker/image/" + this.identifier + ".original", buffer);
                 System.out.println("****** BUFFER WAS NULL" + buffer);
             }
+            super.onPostExecute(buffer);
             this.messenger.send("multi_image_picker/image/" + this.identifier + ".original", buffer);
         }
     }
